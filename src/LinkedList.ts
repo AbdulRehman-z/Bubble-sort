@@ -57,7 +57,7 @@ export class LinkedList {
     throw new Error("Out of reach index");
   }
 
-  compare(leftIndex: number, rightIndex: number): Boolean {
+  compare(leftIndex: number, rightIndex: number): boolean {
     if (!this.head) {
       throw new Error("CANT COMPARE");
     }
@@ -72,5 +72,16 @@ export class LinkedList {
     const leftSide = leftNode;
     this.at(leftIndex).data = rightNode;
     this.at(rightIndex).data = leftSide;
+  }
+
+  print(): void {
+    if (!this.head) return;
+
+    let node: Node | null = this.head;
+
+    while (node) {
+      console.log(node.data);
+      node = node.next;
+    }
   }
 }
