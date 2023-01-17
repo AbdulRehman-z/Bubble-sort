@@ -6,7 +6,6 @@ export class NumberCollection extends Sorter {
   }
 
   get length(): number {
-    console.log(this.data);
     return this.data.length;
   }
 
